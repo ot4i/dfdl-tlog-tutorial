@@ -1,0 +1,50 @@
+{
+  "_comment": "Content from this URL https://github.com/ot4i/ot4i.github.io/blob/master/tutorials/en/repo_metadata.json",
+  "managerUrl": "http://ot4i.github.io/tutorials",
+  "managerVersion": "1.0",
+  "downloadableForLocalInstall": "https://github.com/ot4i/tutorials/releases/download/localInstall.zip",
+  "categories": [
+    {
+      "name": "Tool Capabilities",
+      "description": "Explore Integration Bus concepts by following simple tutorials",
+      "descriptionUrl": "http://ot4i.github.io/tutorials/en/categories/Tools_Category_overview.htm",
+      "iibVersions": "",
+      "visible": "true",
+      "tutorials": [
+	{
+       	        "name"          : "Modeling Toshiba 4690 TLog data by using DFDL",
+                "version"	: "1.0",
+                "iibVersions"	: "10.*-11.*",
+           	"shortDesc"     : "Learn how to model Toshiba 4690 TLog data by using Data Format Description Language (DFDL)",
+           	"detailsURL"    : "http://smhdfdl.github.io/dfdl-tlog-tutorial/dfdltlog/en/details.html",
+           	"stepsURL"      : "http://smhdfdl.github.io/dfdl-tlog-tutorial/dfdltlog/en/steps.html",
+           	"zipURL"        : "https://github.com/smhdfdl/dfdl-tlog-tutorial/releases/download/v1.0.0/dfdltlog_PI_v1.zip",
+           	"barFile"       : "",
+           	"visible"	: "true",
+           	"tags"		: "dfdl;tlog;ace;4690",
+           	"isPattern"	: "false",
+           	"isFavorite"	: "true",
+           	"projects"	: "TLOG-ACE",
+       	        "editorResPaths": [
+           				{
+       		        	        	"id" : "MainSchema",
+       				                "editor" : "dfdl",
+    			  	                "wspath" : "<workspace>/TLOG-ACE/TlogAce.xsd"
+       			                }
+        		          ],
+		"deployedResources": [
+				     ]
+	} 
+      ]
+    },
+    {
+      "name": "Scenarios",
+      "description": "Explore powerful Integration Bus capabilities through integrated scenarios",
+      "descriptionUrl": "http://ot4i.github.io/tutorials/en/categories/Scenario_Category_overview.htm",
+      "iibVersions": "",
+      "visible": "true",
+      "tutorials": [
+      ]
+    }
+  ]
+}

@@ -71,7 +71,7 @@
             "section":"This tutorial demonstrates how to model Toshiba 4690 TLog data by using DFDL schema."
           },
           {
-            "section":"A Transaction Log (TLog) is a complete, detailed record of everything that occurs at a Point of Sale (PoS) terminal, including events that are not directly related to a sales transaction. The precise TLog record format is unique to a given POS application. This tutorial considers Toshiba (ex-IBM) 4690 ACE v7r5 TLog, a delimited binary format emitted by 4690 PoS terminals."
+            "section":"A Transaction Log (TLog) is a complete, detailed record of everything that occurs at a Point of Sale (PoS) terminal, including events that are not directly related to a sales transaction. The precise TLog record format is unique to a given PoS application. This tutorial considers Toshiba (ex-IBM) 4690 ACE v7r5 TLog, a delimited binary format emitted by 4690 PoS terminals."
           },
           {
             "section":"4690 TLog messages consist of a number of transactions, each of which comprises one or more transaction records (sometimes called 'strings'). Each transaction starts with x22 and ends with x22x0Dx0A. Within a transaction, the transaction records are separated by x22x2Cx22. Within a transaction record, each field is typically separated by x3A, though some records use x22x3Ax22. Fields are either ASCII text, hex binary or a BCD variant specific to 4690, and are fixed or variable length."
@@ -189,7 +189,7 @@
               "section":"The <span class='filepath'>TlogAce.xsd</span> schema opens in the DFDL editor. If it does not open, double-click the DFDL schema to open it in the editor." 
             },
             {
-              "section":"The Transactions message is highlighted and it models a file of 4690 transactions each consisting of any number of transaction records. The main editor view shows the logical components of the message, such as elements and sequences. You can explore the Transactions message structure by expanding the elements." 
+              "section":"The Transactions message is highlighted and it models a file of 4690 ACE transactions each consisting of any number of transaction records. The main editor view shows the logical components of the message, such as elements and sequences. You can explore the Transactions message structure by expanding the elements." 
             },
             {
               "section":"The physical rendering of each logical component is described by the DFDL properties in the <span class='uicontrol'>Representation Properties</span> tab. DFDL properties can be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png' alt='' /> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from the <span class='filepath'>TlogFormat.xsd</span> schema." 

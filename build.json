@@ -1,0 +1,10 @@
+{    
+    "main" : {
+      "project" : "TLOG-ACE",
+      "artefact": "TlogAce.xsd",
+      "editor"  : "dfdl"
+    },
+    "bar" : {
+        "build" : false
+    }
+  }

@@ -31,7 +31,7 @@
   "tutorial":{
     "_common":{
       "name":"Modeling Toshiba 4690 TLog data by using DFDL",
-      "shortDescription":"Learn how to model Toshiba TLog data by using Data Format Description Language (DFDL).",
+      "shortDescription":"Learn how to model Toshiba 4690 Point of Sale Transaction Log data by using Data Format Description Language (DFDL).",
       "durationText":"This tutorial takes approximately",
       "durationTime":"10 minutes",
       "_resourceToOpenComment":"The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
@@ -74,10 +74,10 @@
             "section":"A Transaction Log (TLog) is a complete, detailed record of everything that occurs at a Point of Sale (PoS) terminal, including events that are not directly related to a sales transaction. The precise TLog record format is unique to a given PoS application. This tutorial considers Toshiba (ex-IBM) 4690 ACE v7r5 TLog, a delimited binary format emitted by 4690 PoS terminals."
           },
           {
-            "section":"4690 TLog messages consist of a number of transactions, each of which comprises one or more transaction records (sometimes called 'strings'). Each transaction starts with x22 and ends with x22x0Dx0A. Within a transaction, the transaction records are separated by x22x2Cx22. Within a transaction record, each field is typically separated by x3A, though some records use x22x3Ax22. Fields are either ASCII text, hex binary or a BCD variant specific to 4690, and are fixed or variable length."
+            "section":"4690 TLog messages consist of a number of transactions, each of which comprises one or more transaction records (sometimes called 'strings'). Each transaction starts with x'22' and ends with x'220D0A'. Within a transaction, the transaction records are separated by x'222C22'. Within a transaction record, each field is typically separated by x'3A', though some records use x'223A22'. Fields are either ASCII text, hex binary or a BCD variant specific to 4690, and are fixed or variable length."
           },
           {
-            "section":"There are many different types of transaction record, and the first field identifies the type. Some of the record types have sub-types which are identified by a subsequent field or fields. For performance, the record type field is treated as an initiator. Record sub-types are identified using a discriminator on the appropriate field(s)." 
+            "section":"There are many different types of transaction record, and the first field identifies the type. Some of the record types have sub-types which are identified by a subsequent field or fields. In the DFDL model, the record type field is treated as an initiator, for performance, and record sub-types are identified using a discriminator on the appropriate field(s)." 
           },
           {  
             "section":"4690 Tlogs are invariably customized by each retailer by adding extra transaction records, typically to the 99 range, or by adding extra fields to the end of records."
@@ -189,7 +189,7 @@
               "section":"The <span class='filepath'>TlogAce.xsd</span> schema opens in the DFDL editor. If it does not open, double-click the DFDL schema to open it in the editor." 
             },
             {
-              "section":"The Transactions message is highlighted and it models a file of 4690 ACE transactions each consisting of any number of transaction records. The main editor view shows the logical components of the message, such as elements and sequences. You can explore the Transactions message structure by expanding the elements." 
+              "section":"The Transactions message is highlighted and it models a file of 4690 ACE transactions. Each Transaction consists of any number of transaction records. The main editor view shows the logical components of the message, such as elements, sequences and choices. You can explore the Transactions message structure by expanding the elements." 
             },
             {
               "section":"The physical rendering of each logical component is described by the DFDL properties in the <span class='uicontrol'>Representation Properties</span> tab. DFDL properties can be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png' alt='' /> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from the <span class='filepath'>TlogFormat.xsd</span> schema." 
@@ -220,7 +220,7 @@
           "_runComment":"The full steps for the user to run through the tutorial. Use 'sections' to render paragraphs, 'steps' with a type of 'ordered' or 'unordered' to render HTML lists, and 'substeps' to render nested lists.",
           "sections":[
             {
-              "section":"The <span class='filepath'>TlogAce.xsd</span> DFDL schema is open in the DFDL editor. The Transactions message should be highlighted in green.",
+              "section":"The <span class='filepath'>TlogAce.xsd</span> DFDL schema is open in the DFDL editor. The Transactions message should be visible in the Messages section of the editor.",
               "steps":{
                 "type":"ordered",
                 "details":[
@@ -298,7 +298,7 @@
               "section":"The IBM Integration Bus Retail Pack contains the DFDL schemas for Toshiba 4690 ACE. It also contains prebuilt patterns and tooling for rapid connectivity to retail systems."
             }, 
             {
-              "section":"DFDL schemas for Toshiba 4690 Supermarket Application (SA) are available on GitHub."
+              "section":"DFDL schemas for Toshiba 4690 Supermarket Application (SA) are available in the DFDLSchemas TLOG repository on GitHub."
             } 
           ]
         },

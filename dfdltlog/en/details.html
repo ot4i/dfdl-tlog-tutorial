@@ -52,7 +52,7 @@
   <hr>
   <div class="row">
     <div class="small-12 medium-12 large-12 columns">
-      <h5> Learn how to model Toshiba TLog data by using Data Format Description Language (DFDL). </h5>
+      <h5> Learn how to model Toshiba 4690 Point of Sale Transaction Log data by using Data Format Description Language (DFDL). </h5>
     </div>
   </div>
   <div class="row content-details">
@@ -67,9 +67,9 @@
       
         <p> A Transaction Log (TLog) is a complete, detailed record of everything that occurs at a Point of Sale (PoS) terminal, including events that are not directly related to a sales transaction. The precise TLog record format is unique to a given PoS application. This tutorial considers Toshiba (ex-IBM) 4690 ACE v7r5 TLog, a delimited binary format emitted by 4690 PoS terminals. </p>
       
-        <p> 4690 TLog messages consist of a number of transactions, each of which comprises one or more transaction records (sometimes called &#39;strings&#39;). Each transaction starts with x22 and ends with x22x0Dx0A. Within a transaction, the transaction records are separated by x22x2Cx22. Within a transaction record, each field is typically separated by x3A, though some records use x22x3Ax22. Fields are either ASCII text, hex binary or a BCD variant specific to 4690, and are fixed or variable length. </p>
+        <p> 4690 TLog messages consist of a number of transactions, each of which comprises one or more transaction records (sometimes called &#39;strings&#39;). Each transaction starts with x&#39;22&#39; and ends with x&#39;220D0A&#39;. Within a transaction, the transaction records are separated by x&#39;222C22&#39;. Within a transaction record, each field is typically separated by x&#39;3A&#39;, though some records use x&#39;223A22&#39;. Fields are either ASCII text, hex binary or a BCD variant specific to 4690, and are fixed or variable length. </p>
       
-        <p> There are many different types of transaction record, and the first field identifies the type. Some of the record types have sub-types which are identified by a subsequent field or fields. For performance, the record type field is treated as an initiator. Record sub-types are identified using a discriminator on the appropriate field(s). </p>
+        <p> There are many different types of transaction record, and the first field identifies the type. Some of the record types have sub-types which are identified by a subsequent field or fields. In the DFDL model, the record type field is treated as an initiator, for performance, and record sub-types are identified using a discriminator on the appropriate field(s). </p>
       
         <p> 4690 Tlogs are invariably customized by each retailer by adding extra transaction records, typically to the 99 range, or by adding extra fields to the end of records. </p>
       

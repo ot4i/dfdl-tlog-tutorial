@@ -52,7 +52,7 @@
 	<hr>
 	<div class="row">
 		<div class="small-10 medium-10 large-10 columns">
-		<h5> Learn how to model Toshiba TLog data by using Data Format Description Language (DFDL). </h5>
+		<h5> Learn how to model Toshiba 4690 Point of Sale Transaction Log data by using Data Format Description Language (DFDL). </h5>
 		</div>
 		<div class="small-2 medium-2 large-2 columns">
 			<div class="small radius button right" id="backToGallery" onclick="backToGallery()"> Back To Gallery
@@ -152,7 +152,7 @@
 								<p> The <span class="filepath">TlogAce.xsd</span> schema opens in the DFDL editor. If it does not open, double-click the DFDL schema to open it in the editor. </p>
 								
 							
-								<p> The Transactions message is highlighted and it models a file of 4690 ACE transactions each consisting of any number of transaction records. The main editor view shows the logical components of the message, such as elements and sequences. You can explore the Transactions message structure by expanding the elements. </p>
+								<p> The Transactions message is highlighted and it models a file of 4690 ACE transactions. Each Transaction consists of any number of transaction records. The main editor view shows the logical components of the message, such as elements, sequences and choices. You can explore the Transactions message structure by expanding the elements. </p>
 								
 							
 								<p> The physical rendering of each logical component is described by the DFDL properties in the <span class="uicontrol">Representation Properties</span> tab. DFDL properties can be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png" alt> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from the <span class="filepath">TlogFormat.xsd</span> schema. </p>
@@ -189,7 +189,7 @@
 					      	<h4>Follow these steps to complete the tutorial</h4>
 					        
 						    
-								<p> The <span class="filepath">TlogAce.xsd</span> DFDL schema is open in the DFDL editor. The Transactions message should be highlighted in green. </p>
+								<p> The <span class="filepath">TlogAce.xsd</span> DFDL schema is open in the DFDL editor. The Transactions message should be visible in the Messages section of the editor. </p>
 								
 								
 									
@@ -238,7 +238,7 @@
 												
 													<li> Click the <span class="uicontrol">Test Serialize Model</span> button in the DFDL editor toolbar. The <span class="wintitle">Test Serialize Model</span> window opens.</li>
 												
-													<li> In the Serializer Input section, select <span class="uicontrol">Content from a DFDL Test - Logical Instance</span>.</li>
+													<li> In the Serializer Input section, select <span class="uicontrol">Content from 'DFDL Test - Logical Instance'</span>.</li>
 												
 													<li> Set the Encoding to <span class="uicontrol">ASCII</span>.</li>
 												
@@ -277,7 +277,7 @@
 								<p> The IBM Integration Bus Retail Pack contains the DFDL schemas for Toshiba 4690 ACE. It also contains prebuilt patterns and tooling for rapid connectivity to retail systems. </p>
 								
 							
-								<p> DFDL schemas for Toshiba 4690 Supermarket Application (SA) are available on GitHub. </p>
+								<p> DFDL schemas for Toshiba 4690 Supermarket Application (SA) are available in the DFDLSchemas TLOG repository on GitHub. </p>
 								
 							
 						</div>

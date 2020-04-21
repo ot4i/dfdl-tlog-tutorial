@@ -15,14 +15,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<meta name="copyright" content="Copyright IBM Corporation 2014" />
-		<meta name="abstract" content="IBM Integration Bus V10 Tutorial">
+		<meta name="abstract" content="IBM App Connect Enterprise V11 Tutorial">
 		<meta name="author" content="IBM">
-		<meta name="description" content="IBM Integration Bus V10 Tutorial">
+		<meta name="description" content="IBM App Connect Enterprise V11 Tutorial">
 		<meta name="keywords" content="keywords" > 
 		<meta name="robots" content="index,follow">
-		<meta name="source" content="IBM Integration Bus V10 Tutorial" /> 
+		<meta name="source" content="IBM App Connect Enterprise V11 Tutorial" /> 
 		
-		<title>IBM Integration Bus V10 Tutorial</title>
+		<title>IBM App Connect Enterprise V11 Tutorial</title>
 
     	<link rel="stylesheet" href="https://ot4i.github.io/iib-tutorials/css/main.css" />
 		<link rel="stylesheet" href="https://ot4i.github.io/iib-tutorials/css/app.css" />
@@ -43,7 +43,7 @@
 	</div>
 	<div class="row">
 	  <div class="small-9 medium-9 large-9 columns">
-	    <h4 class="title">Modeling Toshiba 4690 TLog data by using DFDL <action><div class="small radius button" id="stepsViewDetails" onclick="viewDetails()"> View Details</div> </action></h4>
+	    <h4 class="title">Modeling Toshiba 4690 TLog data by using DFDL <action><button class="small radius button" tabindex="0" id="stepsViewDetails" onclick="viewDetails()"> View Details</button> </action></h4>
 	  </div>
 	  <div class="small-3 medium-3 large-3 columns">
 		<a href="javascript:;" onclick="openHelpSystem('/com.ibm.ace.home.doc/help_home.htm')" class="small right helplink">IBM Knowledge Center</a> 
@@ -55,8 +55,8 @@
 		<h5> Learn how to model Toshiba 4690 Point of Sale Transaction Log data by using Data Format Description Language (DFDL). </h5>
 		</div>
 		<div class="small-2 medium-2 large-2 columns">
-			<div class="small radius button right" id="backToGallery" onclick="backToGallery()"> Back To Gallery
-			</div>
+			<button class="small radius button right" tabindex="0" id="backToGallery" onclick="backToGallery()"> Back To Gallery
+			</button>
 		</div>
 	</div>
 	<div class="row">          
@@ -88,10 +88,22 @@
 								<p> Library <span class="library">TLOG-ACE</span> contains a set of DFDL schemas that model Toshiba 4690 ACE v7r5 (or earlier) messages. </p>
 								
 							
-								<p> The <span class="filepath">TlogAce.xsd</span> schema models a file of ACE transactions in a flexible way that enables all transaction records to be parsed. Custom transaction records may be added to the <span class="filepath">TlogCustom.xsd</span> schema. The <span class="filepath">TLogFormat.xsd</span> schema defines suitable default values for DFDL properties. </p>
+								<p> The <span class="filepath">TlogAce.xsd</span> schema models a file of ACE transactions in a flexible way that enables all transaction records to be parsed. </p>
 								
 							
-								<p> Test data files are included in the library. </p>
+								<p> The <span class="filepath">TlogAceCommon.xsd</span> schema provides common definitions for reuse. </p>
+								
+							
+								<p> The <span class="filepath">TlogAceCustom.xsd</span> schema can be used to support custom transaction records. </p>
+								
+							
+								<p> The <span class="filepath">TlogAceTypes.xsd</span> schema provides reusable type definitions. </p>
+								
+							
+								<p> The <span class="filepath">TlogAceFormat.xsd</span> schema defines suitable default values for DFDL properties. </p>
+								
+							
+								<p> Test data files with the extension .dat are also included in the library. </p>
 								
 							
 						</div>
@@ -101,29 +113,29 @@
 							<ul>
 							
 								
-																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bd40430_.htm')" title="Knowledge Center link to Message modeling overview">Message modeling overview</a> </li>
-							   	
-							
 								
-																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/df20125_.htm')" title="Knowledge Center link to How to model data with DFDL">How to model data with DFDL</a> </li>
-							   	
-							
-								
-																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ad16940_.htm')" title="Knowledge Center link to TLOG messaging standard">TLOG messaging standard</a> </li>
-							   	
-							
-								
-								
-								<li> <a href="javascript:;" onclick="openExternalBrowser('http://dfdlschemas.github.io/IBM4690-TLOG/')" title="GitHub link to  DFDLSchemas TLOG repository">DFDLSchemas TLOG repository</a> </li>
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bd40430_.htm')" title="Knowledge Center link to  Message modeling overview">Message modeling overview</a> </li>
 									
 							
 								
-																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/df20061_.htm')" title="Knowledge Center link to Working with DFDL schema files">Working with DFDL schema files</a> </li>
-							   	
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20125_.htm')" title="Knowledge Center link to  How to model data with DFDL">How to model data with DFDL</a> </li>
+									
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ad16940_.htm')" title="Knowledge Center link to  TLOG messaging standard">TLOG messaging standard</a> </li>
+									
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://dfdlschemas.github.io/IBM4690-TLOG/')" title="GitHub link to  DFDLSchemas TLOG repository">DFDLSchemas TLOG repository</a> </li>
+									
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20061_.htm')" title="Knowledge Center link to  Working with DFDL schema files">Working with DFDL schema files</a> </li>
+									
 							
 							</ul>
 						</div>
@@ -155,13 +167,13 @@
 								<p> The Transactions message is highlighted and it models a file of 4690 ACE transactions. Each Transaction consists of any number of transaction records. The main editor view shows the logical components of the message, such as elements, sequences and choices. You can explore the Transactions message structure by expanding the elements. </p>
 								
 							
-								<p> The physical rendering of each logical component is described by the DFDL properties in the <span class="uicontrol">Representation Properties</span> tab. DFDL properties can be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src="https://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png" alt> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from the <span class="filepath">TlogFormat.xsd</span> schema. </p>
+								<p> The physical rendering of each logical component is described by the DFDL properties in the <span class="uicontrol">Representation Properties</span> tab. DFDL properties can be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src="https://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png" alt> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from the <span class="filepath">TlogAceFormat.xsd</span> schema. </p>
 								
 							
 								<p> You will be test parsing example 4690 ACE data by using the Transactions message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the <span class="uicontrol">DFDL Test</span> perspective by clicking <span class="uicontrol">Window &gt; Open Perspective</span> and then clicking <span class="uicontrol">DFDL Test</span>. (Alternatively, you can use the toolbar icon <img src="https://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png" alt>). </p>
 								
 							
-								<p> <b>Tip:</b> If this <span class="uicontrol">Tutorial Steps View</span> tab disappears when you switch perspectives, use the <span class="uicontrol">Window &gt; Show View</span> menu option to add it back. </p>
+								<p> <b>Tip:</b> If this <span class="uicontrol">Tutorial Steps View</span> tab disappears when you switch perspectives, to add it back, use the <span class="uicontrol">Window &gt; Show View &gt; Other</span> menu option. In the resulting <span class="uicontrol">Show View</span> dialog, open the Sample Category folder, choose Tutorial Steps View and click OK. </p>
 								
 							
 						</div>
@@ -171,9 +183,9 @@
 							<ul>
 							
 								
-																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/df20061_.htm')" title="Knowledge Center link to Working with DFDL schema files">Working with DFDL schema files</a> </li>
-							   	
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20061_.htm')" title="Knowledge Center link to  Working with DFDL schema files">Working with DFDL schema files</a> </li>
+									
 							
 							</ul>
 						</div>
@@ -274,9 +286,6 @@
 								<p> The shared library can be deployed to an integration node for use by message flows. </p>
 								
 							
-								<p> The IBM Integration Bus Retail Pack contains the DFDL schemas for Toshiba 4690 ACE. It also contains prebuilt patterns and tooling for rapid connectivity to retail systems. </p>
-								
-							
 								<p> DFDL schemas for Toshiba 4690 Supermarket Application (SA) are available in the DFDLSchemas TLOG repository on GitHub. </p>
 								
 							
@@ -287,23 +296,18 @@
 							<ul>
 							
 								
-																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/df20065_.htm')" title="Knowledge Center link to Testing a DFDL schema file">Testing a DFDL schema file</a> </li>
-							   	
-							
 								
-																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ad16940_.htm')" title="Knowledge Center link to TLOG messaging standard">TLOG messaging standard</a> </li>
-							   	
-							
-								
-								
-								<li> <a href="javascript:;" onclick="openExternalBrowser('http://dfdlschemas.github.io/IBM4690-TLOG/')" title="GitHub link to  DFDLSchemas TLOG repository">DFDLSchemas TLOG repository</a> </li>
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20065_.htm')" title="Knowledge Center link to  Testing a DFDL schema file">Testing a DFDL schema file</a> </li>
 									
 							
 								
 								
-								<li> <a href="javascript:;" onclick="openExternalBrowser('http://www-03.ibm.com/software/products/en/integration-bus-retail-pack')" title="Product link to  IBM Integration Bus Retail Pack">IBM Integration Bus Retail Pack</a> </li>
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ad16940_.htm')" title="Knowledge Center link to  TLOG messaging standard">TLOG messaging standard</a> </li>
+									
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://dfdlschemas.github.io/IBM4690-TLOG/')" title="GitHub link to  DFDLSchemas TLOG repository">DFDLSchemas TLOG repository</a> </li>
 									
 							
 							</ul>

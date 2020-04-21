@@ -93,22 +93,25 @@
             {
               "title":"Knowledge Center link to ",
               "description":"Message modeling overview",
-              "link":"com.ibm.etools.mft.doc/bd40430_.htm"
+			  "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bd40430_.htm",              
+              "type":"web"
             },
             {
               "title":"Knowledge Center link to ",
               "description":"How to model data with DFDL",
-              "link":"com.ibm.etools.mft.doc/df20125_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20125_.htm",
+              "type":"web"
             },
             {
               "title":"Knowledge Center link to ",
               "description":"TLOG messaging standard",
-              "link":"com.ibm.etools.mft.doc/ad16940_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ad16940_.htm",
+              "type":"web"
             },
             {
               "title":"GitHub link to ",
               "description":"DFDLSchemas TLOG repository",
-              "link":"http://dfdlschemas.github.io/IBM4690-TLOG/",
+              "link":"https://dfdlschemas.github.io/IBM4690-TLOG/",
               "type":"web"
             }
           ]
@@ -128,10 +131,22 @@
               "section":"Library <span class='library'>TLOG-ACE</span> contains a set of DFDL schemas that model Toshiba 4690 ACE v7r5 (or earlier) messages."
             },
             {
-              "section":"The <span class='filepath'>TlogAce.xsd</span> schema models a file of ACE transactions in a flexible way that enables all transaction records to be parsed. Custom transaction records may be added to the <span class='filepath'>TlogCustom.xsd</span> schema. The <span class='filepath'>TLogFormat.xsd</span> schema defines suitable default values for DFDL properties."
+              "section":"The <span class='filepath'>TlogAce.xsd</span> schema models a file of ACE transactions in a flexible way that enables all transaction records to be parsed."
+			},
+			{
+			  "section":"The <span class='filepath'>TlogAceCommon.xsd</span> schema provides common definitions for reuse."
+			},
+			{
+			  "section":"The <span class='filepath'>TlogAceCustom.xsd</span> schema can be used to support custom transaction records."
+			},
+			{
+			  "section":"The <span class='filepath'>TlogAceTypes.xsd</span> schema provides reusable type definitions."
+			},			
+			{
+			  "section":"The <span class='filepath'>TlogAceFormat.xsd</span> schema defines suitable default values for DFDL properties."
             },
             {
-              "section":"Test data files are included in the library."
+              "section":"Test data files with the extension .dat are also included in the library."				
             }
           ]
         },
@@ -141,28 +156,32 @@
             {
               "title":"Knowledge Center link to ",
               "description":"Message modeling overview",
-              "link":"com.ibm.etools.mft.doc/bd40430_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bd40430_.htm",
+              "type":"web"
             },
             {
               "title":"Knowledge Center link to ",
               "description":"How to model data with DFDL",
-              "link":"com.ibm.etools.mft.doc/df20125_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20125_.htm",
+              "type":"web"
             },
             {
               "title":"Knowledge Center link to ",
               "description":"TLOG messaging standard",
-              "link":"com.ibm.etools.mft.doc/ad16940_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ad16940_.htm",
+              "type":"web"
             },
             {
               "title":"GitHub link to ",
               "description":"DFDLSchemas TLOG repository",
-              "link":"http://dfdlschemas.github.io/IBM4690-TLOG/",
+              "link":"https://dfdlschemas.github.io/IBM4690-TLOG/",
               "type":"web"
             },
             {
               "title":"Knowledge Center link to ",
               "description":"Working with DFDL schema files",
-              "link":"com.ibm.etools.mft.doc/df20061_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20061_.htm",
+              "type":"web"
             }
           ]
         },
@@ -192,14 +211,14 @@
               "section":"The Transactions message is highlighted and it models a file of 4690 ACE transactions. Each Transaction consists of any number of transaction records. The main editor view shows the logical components of the message, such as elements, sequences and choices. You can explore the Transactions message structure by expanding the elements." 
             },
             {
-              "section":"The physical rendering of each logical component is described by the DFDL properties in the <span class='uicontrol'>Representation Properties</span> tab. DFDL properties can be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png' alt='' /> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from the <span class='filepath'>TlogFormat.xsd</span> schema." 
+              "section":"The physical rendering of each logical component is described by the DFDL properties in the <span class='uicontrol'>Representation Properties</span> tab. DFDL properties can be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src='https://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png' alt='' /> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from the <span class='filepath'>TlogAceFormat.xsd</span> schema." 
             },
             {
-              "section":"You will be test parsing example 4690 ACE data by using the Transactions message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the <span class='uicontrol'>DFDL Test</span> perspective by clicking <span class='uicontrol'>Window &gt; Open Perspective</span> and then clicking <span class='uicontrol'>DFDL Test</span>. (Alternatively, you can use the toolbar icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png' alt='' />)." 
+              "section":"You will be test parsing example 4690 ACE data by using the Transactions message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the <span class='uicontrol'>DFDL Test</span> perspective by clicking <span class='uicontrol'>Window &gt; Open Perspective</span> and then clicking <span class='uicontrol'>DFDL Test</span>. (Alternatively, you can use the toolbar icon <img src='https://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png' alt='' />)." 
             },
             {
-              "section":"<b>Tip:</b> If this <span class='uicontrol'>Tutorial Steps View</span> tab disappears when you switch perspectives, use the <span class='uicontrol'>Window &gt; Show View</span> menu option to add it back."
-            }
+              "section":"<b>Tip:</b> If this <span class='uicontrol'>Tutorial Steps View</span> tab disappears when you switch perspectives, to add it back, use the <span class='uicontrol'>Window &gt; Show View &gt; Other</span> menu option. In the resulting <span class='uicontrol'>Show View</span> dialog, open the Sample Category folder, choose Tutorial Steps View and click OK."            
+			}
           ]  
         },
         "helpLinks":{
@@ -208,7 +227,8 @@
             {
               "title":"Knowledge Center link to ",
               "description":"Working with DFDL schema files",
-              "link":"com.ibm.etools.mft.doc/df20061_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20061_.htm",
+              "type":"web"
             }
           ]
         }
@@ -286,16 +306,13 @@
                     "details":"Repeat steps 1 through 6 for the other example data files <span class='filepath'>ace_02_03_07.dat</span>, <span class='filepath'>ace_05_97-05.dat</span> and <span class='filepath'>ace_80-01_98_13_97-13.dat</span>."
                   },  
                   {
-                    "details":"As an alternative to the toolbar buttons, you can also test from the <span class='uicontrol'>DFDL Test - Parse</span> and <span class='uicontrol'>DFDL Test - Serialize</span> views, using the <span class='uicontrol'>Browse</span> button to select a data source and the green play icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlTestPlay.png' alt='' /> to run the DFDL parser or serializer."
+                    "details":"As an alternative to the toolbar buttons, you can also test from the <span class='uicontrol'>DFDL Test - Parse</span> and <span class='uicontrol'>DFDL Test - Serialize</span> views, using the <span class='uicontrol'>Browse</span> button to select a data source and the green play icon <img src='https://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlTestPlay.png' alt='' /> to run the DFDL parser or serializer."
                   }  
                 ]
               }
             },  
             {
               "section":"The shared library can be deployed to an integration node for use by message flows."
-            }, 
-            {
-              "section":"The IBM Integration Bus Retail Pack contains the DFDL schemas for Toshiba 4690 ACE. It also contains prebuilt patterns and tooling for rapid connectivity to retail systems."
             }, 
             {
               "section":"DFDL schemas for Toshiba 4690 Supermarket Application (SA) are available in the DFDLSchemas TLOG repository on GitHub."
@@ -307,26 +324,22 @@
           "details":[
             {
               "title":"Knowledge Center link to ",
-              "description":"Testing a DFDL schema file",
-              "link":"com.ibm.etools.mft.doc/df20065_.htm"
+              "description":"Testing a DFDL schema file",              
+			  "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20065_.htm",
+              "type":"web"
             },
             {
               "title":"Knowledge Center link to ",
               "description":"TLOG messaging standard",
-              "link":"com.ibm.etools.mft.doc/ad16940_.htm"
+			  "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ad16940_.htm",				
+              "type":"web"
             },
             {
               "title":"GitHub link to ",
               "description":"DFDLSchemas TLOG repository",
-              "link":"http://dfdlschemas.github.io/IBM4690-TLOG/",
+              "link":"https://dfdlschemas.github.io/IBM4690-TLOG/",
               "type":"web"
-            },
-            {
-              "title":"Product link to ",
-              "description":"IBM Integration Bus Retail Pack",
-              "link":"http://www-03.ibm.com/software/products/en/integration-bus-retail-pack",
-              "type":"web"
-            }
+            }            
           ]
         },
         "exits":{
